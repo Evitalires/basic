@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="favicon.ico" type="image/png">
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/png"> -->
     <link rel="stylesheet" href="style.css">
     <title>CEAU S.A.S | Talleres</title>
 </head>
@@ -15,13 +15,16 @@
         </figure>
         <nav>
             <ol>
-                <li><a href="">Nosotros</a></li>
-                <li><a href="">Nuestros Cursos</a></li>
-                <li><a href="">Trabajemos juntos</a></li>
+                <li><a class='scroll' href="#nosotros"> Nosotros </a></li>
+                <li><a class='scroll' href="#cursos"> Cursos </a></li>
+                <li><a class='scroll' href="#testimonios"> Testimonios </a></li>
+                <li><a class='scroll' href="#contacto"> Trabajemos juntos </a></li>
+                
             </ol>
         </nav>
     </header>
-    <section>
+
+    <section id='nosotros'>
         <h1>Nosotros</h1>
         <p>
             Somos un centro de <strong>entrenamiento y actualización</strong> en ultrasonido <br/> dirigido a todas las especialidades <strong>medicos</strong> <br/>
@@ -29,7 +32,8 @@
         </p>
         <img src="./images/hero.png" alt="Hero image">
     </section>
-    <section>
+
+    <section id="cursos">
         <h2>Nuestros cursos</h2>
         <article>
             <h3>Titulo curso A</h3>
@@ -50,7 +54,8 @@
             <img src="" alt="Imagen">
         </article>
     </section>
-    <section>
+
+    <section id="testimonios">
         <h2>Testimonios</h2>
         <article>
             <p>Testimonio sobre el curso</p>
@@ -75,7 +80,8 @@
             </figure>
         </article>
     </section>
-    <section>
+
+    <section id="contacto">
         <form action="/contact/">
             <label for='contactInput'> Contáctanos para aprender juntos </label>
             <input id="contactInput" type='mail' value="" required>
@@ -83,7 +89,8 @@
         </form>
     </section>
     <footer>
-        Footer
+        <a href="https://es-la.facebook.com/ceau.ultrasonido" target="_blank">Encuentranos en Facebook</a>
     </footer>    
+    <script src="./scripts/scroll.js"></script>
 </body>
 </html>
