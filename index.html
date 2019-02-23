@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="favicon.ico" type="image/png">
+    <link rel="stylesheet" href="style.css">
     <title>CEAU S.A.S | Talleres</title>
 </head>
 <body>
@@ -26,7 +27,7 @@
             Somos un centro de <strong>entrenamiento y actualización</strong> en ultrasonido <br/> dirigido a todas las especialidades <strong>medicos</strong> <br/>
             Dictamos <strong>cursos - talleres</strong> teórico prácticos de educación continuada.
         </p>
-        <img src="" alt="Imagen de portada">
+        <img src="./images/hero.png" alt="Hero image">
     </section>
     <section>
         <h2>Nuestros cursos</h2>
@@ -75,7 +76,11 @@
         </article>
     </section>
     <section>
-        Seccion contacto
+        <form action="/contact/">
+            <label for='contactInput'> Contáctanos para aprender juntos </label>
+            <input id="contactInput" type='mail' value="" required>
+            <button type="submit">Enviar</button>
+        </form>
     </section>
     <footer>
         Footer
