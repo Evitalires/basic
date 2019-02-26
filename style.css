@@ -1,5 +1,4 @@
 body {
-    background: thistle;
     font-family: 'Source Sans Pro', sans-serif;
 }
 section {
@@ -7,4 +6,23 @@ section {
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Fjalla One', sans-serif;
+}
+h1 {
+    font-size: 36px;
+    line-height: 1.3em;
+}
+h1 strong {
+    color: aliceblue;
+}
+.hero {
+    height: 300px;
+}
+.course_details {
+    width: 500px;
+    border: 1px solid aquamarine
+}
+.course_image_container {
+    margin: 0;
+    width: 500px;
+    border: 1px solid royalblue;
 }
