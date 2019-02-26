@@ -1,27 +1,65 @@
+
+
 body {
+    margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
-}
-section {
-    border: 1px solid lightcoral;
+    --grisOscuro: #1d252c;
+    --grisClaro: #626262;
+    --backgroundBlue: #1b2127;
+    --backgroundGrisClaro: #fafafa;
+    --blue: #026fff;
 }
 h1, h2, h3, h4, h5, h6 {
+    margin: 0;
     font-family: 'Fjalla One', sans-serif;
 }
 h1 {
-    font-size: 36px;
-    line-height: 1.3em;
+    color: white;
+    font-size: 32px;
+    margin: 0px 32px;
+    line-height: 1.5em;
 }
 h1 strong {
-    color: aliceblue;
+    color: var(--blue);
 }
-.hero {
+.header {
+    background-color: var(--grisOscuro);
+}
+.header ol {
+    list-style: none;
+    margin: 0;
+}
+.header figure {
+    margin: 0;
+}
+.header a {
+    color: white;
+    text-decoration: none;
+}
+.hero  {
+    display: flex;
+    background-color: var(--grisOscuro)
+}
+.courses {
+    background: var(--backgroundGrisClaro);
+}
+.course {
+    display: flex;
+    margin: 16px;
+    margin-bottom: 20px;
+    padding: 32px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid lightgray;
 }
 .course_details {
     width: 500px;
-    border: 1px solid aquamarine
 }
 .course_image_container {
     margin: 0;
     width: 500px;
-    border: 1px solid royalblue;
+}
+.course_image_container img{
+    width: 100%;
 }
