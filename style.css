@@ -53,6 +53,9 @@ footer img {
     width: 72px;
     height: 32px;
 }
+section div h2 {
+    padding: 32px 0;
+}
 .container {
     display: inherit;
     height: inherit;
@@ -68,8 +71,10 @@ footer img {
     height: 72px;
     padding: 0px 32px;
     align-items: center;
+    position: relative;
     justify-content: space-between;
     background-color: var(--grisOscuro);
+    box-shadow: 0px 6px 10px 0px #0d1217b3;
 }
 .header figure {
     margin: 0;
@@ -94,21 +99,27 @@ footer img {
     align-items: center;
     height: 340px;
     justify-content: space-between;
-    padding: 0 32px;
+    padding: 32px 0;
     background-color: var(--grisOscuro)
 }
 .hero img {
     height: inherit;
+    object-fit: cover;
 }
+
 .courses {
+    height: max-content;
+    padding-bottom: 16px;
     background: var(--backgroundGrisClaro);
 }
 .course {
     display: flex;
     padding: 32px;
+    margin: 16px 0;
     border-radius: 12px;
     box-sizing: border-box;
     background-color: white;
+    box-shadow: 1px 4px 8px -2px lightgrey;
     border: 1px solid lightgray;
 }
 .course_details {
@@ -134,6 +145,7 @@ footer img {
     display: flex;
     flex-shrink: 0;
     flex-wrap: wrap;
+    padding-bottom: 32px;
     justify-content: space-evenly;
 }
 .testimonies h2 {
@@ -141,23 +153,24 @@ footer img {
 }
 
 .testimony {
-    width: 440px;
+    width: 380px;
     margin: 12px;
+    padding: 32px 24px;
     background: var(--backgroundGrisClaro);
     text-align: center;
     display: flex;
     border-radius: 12px;
-    padding-bottom: 16px;
     box-shadow: 1px 4px 8px -2px lightgrey;
     flex-direction: column;
     align-items: center;
 }
 .testimony p {
     width: inherit;
+    letter-spacing: 2px;
+    font-weight: 500;
     margin: 0;
-    padding: 16px;
-    height: 72px;
-    color: var(--grisOscuro)
+    height: 88px;
+    color: var(--grisOscuro);
     box-sizing: border-box;
     border-radius: 12px;
 
@@ -177,6 +190,7 @@ footer img {
 .contact {
     color: white;
     height: 196px;
+    padding: 32px 0px;
     display: flex;
     align-items: center;
     background-color: var(--blue);
@@ -195,6 +209,7 @@ footer img {
 }
 .contact form input {
     width: inherit;
+    border: none;
     box-sizing: border-box;
     border-radius: 4px;
     font-size: 27px;
