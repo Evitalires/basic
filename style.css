@@ -9,22 +9,44 @@ body {
     --backgroundGrisClaro: #fafafa;
     --blue: #026fff;
 }
-h1, h2, h3, h4, h5, h6 {
+a {
+    display: flex;
+    align-items: center;
+    color: white;
+    height: inherit;
+    padding: 0 12px;
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6, figure {
     margin: 0;
     font-family: 'Fjalla One', sans-serif;
 }
 h1 {
     color: white;
     font-size: 32px;
-    margin: 0px 32px;
     line-height: 1.5em;
 }
 h1 strong {
     color: var(--blue);
 }
+footer {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--grisOscuro);
+}
+footer .description {
+    display: flex;
+    justify-content: space-between;
+}
+footer p {
+    margin: 0;
+    color: white;
+}
 .header {
     display: flex;
-    height: 60px;
+    height: 72px;
     padding: 0px 32px;
     align-items: center;
     justify-content: space-between;
@@ -48,17 +70,16 @@ h1 strong {
     list-style: none;
 }
 
-.header a {
-    display: flex;
-    align-items: center;
-    color: white;
-    height: inherit;
-    padding: 0 12px;
-    text-decoration: none;
-}
 .hero  {
     display: flex;
+    align-items: center;
+    height: 340px;
+    justify-content: space-between;
+    padding: 0 32px;
     background-color: var(--grisOscuro)
+}
+.hero img {
+    height: inherit;
 }
 .courses {
     background: var(--backgroundGrisClaro);
