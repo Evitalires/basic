@@ -104,3 +104,35 @@ footer p {
 .course_image_container img{
     width: 100%;
 }
+.testimonies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.testimonies h2 {
+    width: 100%;
+}
+
+.testimony {
+    width: 500px;
+    margin: 12px;
+    padding: 16px;
+    text-align: center;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+}
+.testimony figure {
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+}
+.testimony figure img {
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+}
