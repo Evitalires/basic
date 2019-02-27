@@ -13,34 +13,39 @@
 </head>
 <body>
     <header class="header">
-        <figure>
-            <img src="" alt="Logo">
-        </figure>
-        <nav>
-            <ol>
-                <li><a class='scroll' href="#nosotros"> Nosotros </a></li>
-                <li><a class='scroll' href="#cursos"> Cursos </a></li>
-                <li><a class='scroll' href="#testimonios"> Testimonios </a></li>
-                <li><a class='scroll' href="#contacto"> Trabajemos juntos </a></li>
-                
-            </ol>
-        </nav>
+        <div class="container">
+            <figure>
+                <img src="" alt="Logo">
+            </figure>
+            <nav>
+                <ol>
+                    <li><a class='scroll' href="#nosotros"> Nosotros </a></li>
+                    <li><a class='scroll' href="#cursos"> Cursos </a></li>
+                    <li><a class='scroll' href="#testimonios"> Testimonios </a></li>
+                    <li><a class='scroll' href="#contacto"> Trabajemos juntos </a></li>
+                    
+                </ol>
+            </nav>
+        </div>
     </header>
 
     <section id='nosotros' class="hero">
-        <h1>
-            CEUA S.A.S  <br/> 
-            Somos un centro para todos los <strong>Médicos</strong> que deseen 
-            <br/>
-            especializarse através de <strong>entrenamiendo y actualización</strong> en ultrasonido.
-            <br/>
-            Dictamos <strong>cursos y talleres teórico-prácticos</strong> de educación continuada.
-        </h1>
-        <img src="./images/hero.png" alt="Hero image">
+        <div class="container">
+            <h1>
+                CEUA S.A.S  <br/> 
+                Somos un centro para todos los <strong>Médicos</strong> que deseen 
+                <br/>
+                especializarse através de <strong>entrenamiendo y actualización</strong> en ultrasonido.
+                <br/>
+                Dictamos <strong>cursos y talleres teórico-prácticos</strong> de educación continuada.
+            </h1>
+            <img src="./images/hero.png" alt="Hero image">
+        </div>
     </section>
 
     <section id="cursos" class="courses">
-        <h2>Nuestros cursos</h2>
+        <div class="container">
+            <h2>Nuestros cursos</h2>
         <article class='course' >
             <div class="course_details">
                 <h3 class="course_title">Ecografía del Sistema Musculo esquelético</h3>
@@ -50,6 +55,7 @@
                     Dirigido a Fisiatras, Ortopedistas, Médicos deportologos, Reumatólogos.
                 </p>
                 <p class="course_duration">Duración: Intensivo, teórico práctico. (Incluye el almuerzo y el Coffee Break)</p>
+                <button>Quiero ir</button>
             </div>
             <figure class="course_image_container">
                 <img class="course_image" src="./images/eco_sistema_musculo.png" alt="Imagen">
@@ -66,6 +72,7 @@
                 <p class="course_duration">
                     Duración: Intensivo, teórico práctico. (Incluye el almuerzo y el Coffee Break)
                 </p>
+                <button>Quiero ir</button>
             </div>
             <figure class="course_image_container">
                 <img class="course_image" src="./images/anestesia_general.png" alt="Imagen">
@@ -87,6 +94,7 @@
                 <p class="course_duration">
                     Duración: Intensivo, teórico práctico. (Incluye almuerzo y Coffee Break)
                 </p>
+                <button>Quiero ir</button>
             </div>
             <figure class="course_image_container">
                 <img class="course_image" src="./images/accesos_vasculares.jpg" alt="Imagen">
@@ -107,6 +115,7 @@
                 <p class="course_duration">
                     Duración: Intensivo, teórico práctico. (Incluye almuerzo y Coffee Break)
                 </p>
+                <button>Quiero ir</button>
             </div>
             <figure class="course_image_container">
                 <img class="course_image" src="./images/shock_trauma.jpg" alt="Imagen">
@@ -127,15 +136,18 @@
                 <p class="course_duration">
                     Duración: Intensivo, teórico práctico. (Incluye almuerzo y Coffee Break)
                 </p>
+                <button>Quiero ir</button>
             </div>
             <figure class="course_image_container">
                 <img class="course_image" src="./images/doppler.jpeg" alt="Imagen">
             </figure>
         </article>
+        </div>
     </section>
 
     <section id="testimonios" class="testimonies">
-        <h2>Testimonios</h2>
+        <div class="container">
+            <h2>Testimonios</h2>
         <article class="testimony">
             <p>
                 La didactica del curso-taller fue excelente. Directa, concisa y llena de práctica. Totalmente Recomendada
@@ -168,24 +180,29 @@
                 <img src="./images/person4.jpg" alt="Img del testimonio">
             </figure>
         </article>
+        </div>
     </section>
 
-    <section id="contacto">
-        <form action="/contact/">
-            <label for='contactInput'> Contáctanos para aprender juntos </label>
-            <input id="contactInput" type='mail' value="" required>
-            <button type="submit">Enviar</button>
-        </form>
+    <section id="contacto" class="contact">
+        <div class="container">
+            <form action="/contact/">
+                <label for='contactInput'> Contáctanos para aprender juntos </label>
+                <input id="contactInput" type='mail' value="" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
     </section>
     <footer>
-        <div class="linkFacebook">
-            <a href="https://es-la.facebook.com/ceau.ultrasonido" target="_blank">Encuentranos en Facebook</a>
-        </div>
-        <div class="description">
-            <p>Proyecto del Curso de Desarrollo Web Online 2018</p>
-            <figure>
-                <img src="./images/logPlatzi" alt="LogoPlatzi">
-            </figure>
+        <div class="container">
+            <div class="linkFacebook">
+                <a href="https://es-la.facebook.com/ceau.ultrasonido" target="_blank">Encuentranos en Facebook</a>
+            </div>
+            <div class="description">
+                <p>Proyecto del Curso de Desarrollo Web Online 2018</p>
+                <figure>
+                    <img src="./images/platzi.png" alt="LogoPlatzi">
+                </figure>
+            </div>
         </div>
     </footer>    
     <script src="./scripts/scroll.js"></script>

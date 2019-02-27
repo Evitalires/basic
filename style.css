@@ -7,7 +7,7 @@ body {
     --grisClaro: #626262;
     --backgroundBlue: #1b2127;
     --backgroundGrisClaro: #fafafa;
-    --blue: #026fff;
+    --blue: #056fff;
 }
 a {
     display: flex;
@@ -26,23 +26,42 @@ h1 {
     font-size: 32px;
     line-height: 1.5em;
 }
-h1 strong {
+h1 strong,
+section h2 {
     color: var(--blue);
 }
+
 footer {
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0px 32px;
     background: var(--grisOscuro);
 }
 footer .description {
+    width: 40%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
 }
 footer p {
     margin: 0;
     color: white;
+}
+footer img {
+    width: 72px;
+    height: 32px;
+}
+.container {
+    display: inherit;
+    height: inherit;
+    width: 1000px;
+    margin: 0 auto;
+    flex-direction: inherit;
+    flex-wrap: inherit;
+    align-items: inherit;
+    justify-content: space-between;
 }
 .header {
     display: flex;
@@ -86,8 +105,6 @@ footer p {
 }
 .course {
     display: flex;
-    margin: 16px;
-    margin-bottom: 20px;
     padding: 32px;
     border-radius: 12px;
     box-sizing: border-box;
@@ -96,6 +113,15 @@ footer p {
 }
 .course_details {
     width: 500px;
+}
+.course_details button,
+.contact form button {
+    padding: 8px 20px;
+    color: var(--blue);
+    max-width: 120px;
+    border: 1px solid var(--blue);
+    font-size: 1em;
+    border-radius: 4px;
 }
 .course_image_container {
     margin: 0;
@@ -106,6 +132,7 @@ footer p {
 }
 .testimonies {
     display: flex;
+    flex-shrink: 0;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
@@ -114,16 +141,26 @@ footer p {
 }
 
 .testimony {
-    width: 500px;
+    width: 440px;
     margin: 12px;
-    padding: 16px;
+    background: var(--backgroundGrisClaro);
     text-align: center;
-    border-radius: 12px;
     display: flex;
+    border-radius: 12px;
+    padding-bottom: 16px;
+    box-shadow: 1px 4px 8px -2px lightgrey;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    border: 1px solid lightgray;
+}
+.testimony p {
+    width: inherit;
+    margin: 0;
+    padding: 16px;
+    height: 72px;
+    color: var(--grisOscuro)
+    box-sizing: border-box;
+    border-radius: 12px;
+
 }
 .testimony figure {
     width: 132px;
@@ -135,4 +172,37 @@ footer p {
     width: inherit;
     height: inherit;
     border-radius: 50%;
+    border: 1px solid lightgray;
+}
+.contact {
+    color: white;
+    height: 196px;
+    display: flex;
+    align-items: center;
+    background-color: var(--blue);
+}
+.contact form {
+    display: flex;
+    width: 423px;
+    height: 196px;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.contact form label {
+    font-size: 32px;
+    box-sizing: border-box;
+    font-family: 'Fjalla One', sans-serif;
+}
+.contact form input {
+    width: inherit;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 27px;
+}
+.contact form button {
+    align-self: center;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
 }
