@@ -23,17 +23,37 @@ h1 strong {
     color: var(--blue);
 }
 .header {
+    display: flex;
+    height: 60px;
+    padding: 0px 32px;
+    align-items: center;
+    justify-content: space-between;
     background-color: var(--grisOscuro);
-}
-.header ol {
-    list-style: none;
-    margin: 0;
 }
 .header figure {
     margin: 0;
+    display: inline;
 }
+
+.header nav,
+.header ol,
+.header ol li {
+    display: flex;
+    height: inherit;
+    align-items: center;
+}
+.header ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 .header a {
+    display: flex;
+    align-items: center;
     color: white;
+    height: inherit;
+    padding: 0 12px;
     text-decoration: none;
 }
 .hero  {
