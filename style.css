@@ -93,14 +93,30 @@ section div h2 {
     padding: 0;
     list-style: none;
 }
+.header .logo {
+    display: flex;
+    flex-direction: column;
+}
+.header .logo h2 {
+    color: white;
+    padding-left: 8px;
+    font-size: 18px;
+}
+.header .logo figure {
+    margin-top: -20px;
+}
 
 .hero  {
     display: flex;
-    align-items: center;
+    align-items: initial;
     height: 340px;
     justify-content: space-between;
     padding: 32px 0;
     background-color: var(--grisOscuro)
+}
+.hero h1 {
+    height: inherit;
+    padding: 8px 8px 0px 0px;
 }
 .hero img {
     height: inherit;
