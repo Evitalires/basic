@@ -1,13 +1,14 @@
 
 
 body {
-    margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
     --grisOscuro: #1d252c;
     --grisClaro: #626262;
     --backgroundBlue: #1b2127;
     --backgroundGrisClaro: #fafafa;
     --blue: #056fff;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    
 }
 a {
     display: flex;
@@ -24,7 +25,9 @@ h1, h2, h3, h4, h5, h6, figure {
 h1 {
     color: white;
     font-size: 32px;
-    line-height: 1.5em;
+    line-height: 1.5;
+    letter-spacing: -.2px;
+    margin: 0;
 }
 h1 strong,
 section h2 {
@@ -56,22 +59,14 @@ footer img {
 section div h2 {
     padding: 32px 0;
 }
-.container {
-    display: inherit;
-    height: inherit;
-    width: 1000px;
-    margin: 0 auto;
-    flex-direction: inherit;
-    flex-wrap: inherit;
-    align-items: inherit;
-    justify-content: space-between;
-}
+
 .header {
     display: flex;
-    height: 72px;
+    min-height: 72px;
     padding: 0px 32px;
-    align-items: center;
+    flex-wrap: wrap;
     position: relative;
+    align-items: center;
     justify-content: space-between;
     background-color: var(--grisOscuro);
     box-shadow: 0px 6px 10px 0px #070b0fb3;
@@ -108,18 +103,18 @@ section div h2 {
 
 .hero  {
     display: flex;
-    align-items: initial;
-    height: 340px;
-    justify-content: space-between;
+    min-height: 340px;
     padding: 32px 0;
-    background-color: var(--grisOscuro)
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--grisOscuro);
+
 }
 .hero h1 {
-    height: inherit;
-    padding: 8px 8px 0px 0px;
+    /* height: inherit;
+    padding: 8px 8px 0px 0px; */
 }
 .hero img {
-    height: inherit;
     object-fit: cover;
 }
 
@@ -236,4 +231,17 @@ section div h2 {
     border: 1px solid white;
     border-radius: 4px;
     color: white;
+}
+
+.container {
+    height: inherit;
+    flex: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+    flex-direction: inherit;
 }

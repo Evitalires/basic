@@ -1,0 +1,27 @@
+@media screen and (max-width: 1024px) {
+
+}
+/* Por debajo de 768px se aplica lo siguiente */
+@media screen and (max-width: 767px) {
+    .header {
+        display: block;
+        padding: 16px 32px;
+        height: auto;
+    }
+    .header ol {
+        flex-direction: column;
+        flex: 1;
+    }
+    .header ol li {
+        height: 48px;
+    }
+    .header .logo {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 480px) {
+
+}
+@media screen and (max-width: 320px) {
+
+}
