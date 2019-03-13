@@ -105,7 +105,6 @@ section div h2 {
     display: flex;
     min-height: 340px;
     padding: 32px 0;
-    flex-wrap: wrap;
     align-items: center;
     background-color: var(--grisOscuro);
 
@@ -115,6 +114,9 @@ section div h2 {
     padding: 8px 8px 0px 0px; */
 }
 .hero img {
+    min-width: 500px;
+    min-height: 300px;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -122,6 +124,11 @@ section div h2 {
     height: max-content;
     padding-bottom: 16px;
     background: var(--backgroundGrisClaro);
+}
+.courses h2 {
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+    border-bottom: 4px solid var(--blue);
 }
 .course {
     display: flex;
@@ -134,7 +141,11 @@ section div h2 {
     border: 1px solid lightgray;
 }
 .course_details {
-    width: 500px;
+    width: 50%;
+}
+.course_details button {
+    display: block;
+    margin: 0 auto;
 }
 .course_details button,
 .contact form button {
@@ -147,7 +158,7 @@ section div h2 {
 }
 .course_image_container {
     margin: 0;
-    width: 500px;
+    width: 50%;
 }
 .course_image_container img{
     width: 100%;

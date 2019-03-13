@@ -18,6 +18,38 @@
     .header .logo {
         text-align: center;
     }
+    .header .logo figure {
+        padding-left: 32px;
+    }
+    .hero {
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+    }
+    .hero {
+        padding: 1em;
+    }
+    .hero img {
+        min-width: 100%;
+    }
+
+    .course {
+        flex-wrap: wrap-reverse;
+    }
+    .course_details {
+        width: 100%;
+        margin-top: -56px;
+        z-index: 1000;
+    }
+    .course_details .course_title {
+        background: white;
+        padding: 16px;
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .course_image_container {
+        width: 100%;
+    }
 }
 @media screen and (max-width: 480px) {
 
