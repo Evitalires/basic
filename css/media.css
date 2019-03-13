@@ -67,16 +67,6 @@
     .course .course_image_container {
         width: 100%;
     }
-}
-@media screen and (max-width: 479px) {
-    .course_details {
-        font-size: 12px;
-    }
-
-    .contact form label{
-        font-size: 1.5em;
-        text-align: center;
-    }
     footer {
         flex-wrap: wrap;
     }
@@ -93,6 +83,17 @@
         align-items: baseline;
         min-height: 100px;
     }
+}
+@media screen and (max-width: 479px) {
+    .course_details {
+        font-size: 12px;
+    }
+
+    .contact form label{
+        font-size: 1.5em;
+        text-align: center;
+    }
+    
 
 }
 @media screen and (max-width: 319px) {
