@@ -4,7 +4,9 @@ body {
     --grisOscuro: #1d252c;
     --grisClaro: #626262;
     --backgroundBlue: #1b2127;
-    --backgroundGrisClaro: #fafafa;
+    /* --backgroundGrisClaro: #fafafa; */
+    --backgroundGrisClaro: #f3f5f7;
+    --text: #21405f;
     --blue: #056fff;
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
@@ -104,15 +106,12 @@ section div h2 {
 .hero  {
     display: flex;
     min-height: 340px;
-    padding: 32px 0;
+    padding: 0 0 0 1em;
     align-items: center;
     background-color: var(--grisOscuro);
 
 }
-.hero h1 {
-    /* height: inherit;
-    padding: 8px 8px 0px 0px; */
-}
+
 .hero img {
     min-width: 500px;
     min-height: 300px;
@@ -122,7 +121,7 @@ section div h2 {
 
 .courses {
     height: max-content;
-    padding-bottom: 16px;
+    padding: 0 1em 1em 1em;
     background: var(--backgroundGrisClaro);
 }
 .courses h2 {
@@ -133,12 +132,15 @@ section div h2 {
 .course {
     display: flex;
     padding: 32px;
-    margin: 16px 0;
+    margin: 1em;
     border-radius: 12px;
     box-sizing: border-box;
     background-color: white;
     box-shadow: 1px 4px 8px -2px lightgrey;
     border: 1px solid lightgray;
+}
+.course p {
+    margin: .5em 0;
 }
 .course_details {
     width: 50%;
@@ -149,12 +151,13 @@ section div h2 {
 }
 .course_details button,
 .contact form button {
+    font-size: 1em;
     padding: 8px 20px;
     color: var(--blue);
     max-width: 120px;
-    border: 1px solid var(--blue);
-    font-size: 1em;
     border-radius: 4px;
+    background: transparent;
+    border: 1px solid var(--blue);
 }
 .course_image_container {
     margin: 0;
@@ -167,16 +170,18 @@ section div h2 {
     display: flex;
     flex-shrink: 0;
     flex-wrap: wrap;
+    padding: 0 1em;
     padding-bottom: 32px;
     justify-content: space-evenly;
 }
 .testimonies h2 {
     width: 100%;
+    border-bottom: 4px solid var(--blue);
 }
 
 .testimony {
-    width: 380px;
-    margin: 12px;
+    max-width: 380px;
+    margin: .5em;
     padding: 32px 24px;
     background: var(--backgroundGrisClaro);
     text-align: center;
@@ -191,16 +196,18 @@ section div h2 {
     letter-spacing: 2px;
     font-weight: 500;
     margin: 0;
-    height: 88px;
-    color: var(--grisOscuro);
+    height: auto;
+    font-weight: bold;
+    color: var(--text);
     box-sizing: border-box;
-    border-radius: 12px;
+    border-radius: 1em;
 
 }
 .testimony figure {
     width: 132px;
     height: 132px;
     border-radius: 50%;
+    margin: .5em 0;
     border: 1px solid lightgray;
 }
 .testimony figure img {
