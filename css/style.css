@@ -6,7 +6,7 @@ body {
     --backgroundBlue: #1b2127;
     /* --backgroundGrisClaro: #fafafa; */
     --backgroundGrisClaro: #f3f5f7;
-    --text: #21405f;
+    --text: #112f4c;
     --blue: #056fff;
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
@@ -67,7 +67,9 @@ section div h2 {
     min-height: 72px;
     padding: 0px 32px;
     flex-wrap: wrap;
-    position: relative;
+    position: fixed;
+    width: calc(100% - 32px);
+    z-index: 3;
     align-items: center;
     justify-content: space-between;
     background-color: var(--grisOscuro);
@@ -105,26 +107,37 @@ section div h2 {
 
 .hero  {
     display: flex;
+    position: relative;
     min-height: 340px;
-    padding: 0 0 0 1em;
     align-items: center;
     background-color: var(--grisOscuro);
 
 }
+.hero h1 {
+    z-index: 2;
+    text-shadow: 0px 2px 8px #1d252cbf;
+    padding-left: 1em;
+}
 
 .hero img {
-    min-width: 500px;
-    min-height: 300px;
     width: 100%;
+    height: 100%;
     object-fit: cover;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .courses {
     height: max-content;
-    padding: 0 1em 1em 1em;
+    padding: 0 1em 1em;
     background: var(--backgroundGrisClaro);
 }
 .courses h2 {
+    font-size: 1.7em;
     padding-bottom: 8px;
     margin-bottom: 24px;
     border-bottom: 4px solid var(--blue);
@@ -139,11 +152,19 @@ section div h2 {
     box-shadow: 1px 4px 8px -2px lightgrey;
     border: 1px solid lightgray;
 }
+.course h3 {
+    color: var(--text);
+}
 .course p {
+    color: var(--text);
     margin: .5em 0;
 }
 .course_details {
     width: 50%;
+    padding-right: .5em;
+}
+.course_details .course_title {
+    font-size: 1.5em;
 }
 .course_details button {
     display: block;
@@ -158,6 +179,9 @@ section div h2 {
     border-radius: 4px;
     background: transparent;
     border: 1px solid var(--blue);
+}
+.course_details .course_duration {
+    margin-bottom: 2em;
 }
 .course_image_container {
     margin: 0;
@@ -193,9 +217,10 @@ section div h2 {
 }
 .testimony p {
     width: inherit;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-weight: 500;
     margin: 0;
+    margin-bottom: 1em;
     height: auto;
     font-weight: bold;
     color: var(--text);
@@ -214,7 +239,6 @@ section div h2 {
     width: inherit;
     height: inherit;
     border-radius: 50%;
-    border: 1px solid lightgray;
 }
 .contact {
     color: white;
