@@ -73,6 +73,27 @@
         font-size: 12px;
     }
 
+    .contact form label{
+        font-size: 1.5em;
+        text-align: center;
+    }
+    footer {
+        flex-wrap: wrap;
+    }
+    footer .linkFacebook {
+        width: 100%;
+    }
+    footer .linkFacebook a {
+        padding: 1em 0;
+    }
+    footer .description {
+        width: 100%;
+        min-height: 500px;
+        flex-direction: column;
+        align-items: baseline;
+        min-height: 100px;
+    }
+
 }
 @media screen and (max-width: 319px) {
     .course_details {
