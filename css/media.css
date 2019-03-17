@@ -37,6 +37,9 @@
     .header .menu.is-active {
         height: 100vh;
     }
+    .header .menu.is-active ol li {
+        padding: 1.5em;
+    }
     .header .menu.is-active ol li a {
         display: flex;
     }
@@ -63,7 +66,6 @@
         padding: 1em;
     }
     .hero img {
-        opacity: .9;
         min-width: 100%;
     }
 

@@ -6,15 +6,41 @@ window.onload = () => {
 };
 
 function menu() {
+  const mediumDevice = window.matchMedia("screen and (max-width: 767px)");
   const menu = document.querySelector(".menu");
   const burgerButton = document.querySelector('.burger-menu');
-  function toggleClass() {
-    menu.classList.toggle('is-active')
-  }
   
-  burgerButton.addEventListener('click', () => toggleClass())
-  menu.addEventListener('click', () => toggleClass())
+  function toggleClass() {
+      if(menu.classList.contains("is-active")){
+        menu.classList.remove("is-active")
+      }
+      else {
+        menu.classList.add("is-active")
+      }
+  }
+  function addEventMenu() {
+    burgerButton.addEventListener('click', toggleClass);
+    menu.addEventListener('click', toggleClass);
+  }
+  function removeEventMenu() {
+    burgerButton.removeEventListener("click", toggleClass);
+    menu.removeEventListener("click", toggleClass);
 
+  }
+  function validation(event) {
+    if(event.matches) { 
+      addEventMenu();
+    }
+    else {
+      removeEventMenu();
+    }
+  }
+ 
+  validation(mediumDevice);
+
+  mediumDevice.addListener(validation);
+
+  
 
 }
 
