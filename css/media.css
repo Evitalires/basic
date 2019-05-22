@@ -1,5 +1,21 @@
-@media screen and (max-width: 1024px) {
-
+@media screen and (max-width: 900px) {
+    body {
+        font-size: 18px;
+    }
+    .testimonies {
+        justify-items: center;
+        grid-template-columns: 10% 1fr 10%;
+    }
+    .testimonies .testimonies-title {
+        justify-self: normal;
+        grid-column: 2 / 1 span;
+    }
+    .testimonies .testimony:nth-child(even) {
+        grid-column: 2 / 1 span;
+    }
+    .testimonies .testimony:nth-child(odd) {
+        grid-column: 2 / 1 span;
+    }
 }
 /* Por debajo de 768px se aplica lo siguiente */
 @media screen and (max-width: 767px) {
@@ -14,8 +30,10 @@
                                 "nav-bar" ;
     }
     #header ol {
-        flex-direction: column;
-        flex: 1;
+        display: none;
+        width: 100vw;
+        grid-template-rows: repeat(6, 1fr);
+        justify-items: center;
     }
     #header ol li {
         height: 48px;
@@ -43,6 +61,9 @@
     }
     #header #nav-bar.is-active {
         height: 100vh;
+    }
+    #header #nav-bar.is-active ol {
+        display: grid;
     }
     #header #nav-bar.is-active ol li {
         padding: 1.5em;
@@ -130,20 +151,7 @@
         align-items: baseline;
         min-height: 100px;
     }
-    .testimonies {
-        justify-items: center;
-        grid-template-columns: 10% 1fr 10%;
-    }
-    .testimonies .testimonies-title {
-        justify-self: normal;
-        grid-column: 2 / 1 span;
-    }
-    .testimonies .testimony:nth-child(even) {
-        grid-column: 2 / 1 span;
-    }
-    .testimonies .testimony:nth-child(odd) {
-        grid-column: 2 / 1 span;
-    }
+    
 }
 @media screen and (max-width: 479px) {
     .hero h1{

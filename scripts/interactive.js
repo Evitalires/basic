@@ -44,6 +44,7 @@ function menu() {
 
 }
 
+
 function ScrollingNav() {
     //Main method for scroll
   	const easeInCubic = function (t) { return t*t*t }

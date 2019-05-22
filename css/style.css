@@ -28,7 +28,6 @@
   
   .icon-menu:before {
     content: "\e9bd";
-
   }
   
 /* Icomoon */
@@ -43,6 +42,7 @@ body {
     --text: #112f4c;
     --blue: #056fff;
     margin: 0;
+    font-size: 20px;
     font-family: 'Source Sans Pro', sans-serif;
     
 }
@@ -72,14 +72,19 @@ section h2 {
 
 footer {
     min-height: 100px;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0px 10%;
     background: var(--grisOscuro);
 }
+footer .linkFacebook {
+    z-index: 3;
+}
 footer .description {
     display: flex;
+    z-index: 3;
     justify-content: space-around;
     align-items: center;
 }
@@ -91,8 +96,21 @@ footer img {
     width: 72px;
     height: 32px;
 }
+footer iframe {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
 section div h2 {
     padding: 32px 0;
+}
+
+button:hover, input[type="submit"]:hover, a:hover {
+    transition: .3s;
+    transform: scale(1.1);
 }
 
 #header {
@@ -106,7 +124,7 @@ section div h2 {
     background-color: var(--grisOscuro);
     box-shadow: 0px 6px 10px 0px #070b0fb3;
     grid-template-columns: 130px 1fr;
-    grid-template-rows: 30px 30px;
+    grid-template-rows: 35px 35px;
     grid-template-areas:    "text nav-bar"
                             "img nav-bar" ;
 }
@@ -148,7 +166,7 @@ section div h2 {
 }
 
 .hero  {
-    margin-top: 90px;
+    margin-top: 100px;
     position: relative;
     min-height: 540px;
     align-items: center;
@@ -186,9 +204,9 @@ section div h2 {
     background: var(--backgroundGrisClaro);
 }
 .courses .courses-title {
-    margin-top: 16px;
-    font-size: 1.7em;
+    padding-top: 2em;
     padding-bottom: 8px;
+    font-size: 2em;
     margin-bottom: 24px;
     border-bottom: 4px solid var(--blue);
 }
@@ -303,7 +321,7 @@ section div h2 {
 
 .contact {
     color: white;
-    height: 196px;
+    height: 300px;
     padding: 2em 1em;
     display: flex;
     align-items: center;
