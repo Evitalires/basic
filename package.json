@@ -1,0 +1,23 @@
+{
+  "name": "static",
+  "version": "1.0.0",
+  "description": "This is a basic project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evitalires/basic"
+  },
+  "keywords": [
+    "static",
+    "template"
+  ],
+  "author": "Jair Escobar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Evitalires/basic/issues"
+  },
+  "homepage": "https://github.com/Evitalires/basic"
+}
