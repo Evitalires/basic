@@ -3,26 +3,33 @@
 }
 /* Por debajo de 768px se aplica lo siguiente */
 @media screen and (max-width: 767px) {
-    .header {
+    #header {
         display: block;
         padding: 16px 32px;
         height: auto;
+        grid-template-columns: 100%;
+        grid-template-rows: 32px 45px auto;
+        grid-template-areas:    "text"
+                                "img"
+                                "nav-bar" ;
     }
-    .header ol {
+    #header ol {
         flex-direction: column;
         flex: 1;
     }
-    .header ol li {
+    #header ol li {
         height: 48px;
     }
-    .header .logo {
-        text-align: center;
+
+    
+    #header img {
+        padding-left: 35%;
     }
-    .header .logo figure {
-        padding-left: 32px;
+    #header figure {
+        padding-left: 32%;
     }
 
-    .header .menu {
+    #header #nav-bar {
         position: fixed;
         top: 5em;
         left: 0;
@@ -31,19 +38,19 @@
         transition: .3s;
         background:rgba(29, 37, 44, .98) ;
     }
-    .header .menu ol li a {
+    #header #nav-bar ol li a {
         display: none;
     }
-    .header .menu.is-active {
+    #header #nav-bar.is-active {
         height: 100vh;
     }
-    .header .menu.is-active ol li {
+    #header #nav-bar.is-active ol li {
         padding: 1.5em;
     }
-    .header .menu.is-active ol li a {
+    #header #nav-bar.is-active ol li a {
         display: flex;
     }
-    .header .burger-menu {
+    #header .burger-menu {
         width: 2.2em;
         height: 2.2em;
         border-radius: 50%;
@@ -51,9 +58,6 @@
         align-items: center;
         justify-content: center;
         background-color:var(--backgroundBlue); 
-        /* display: block;
-        line-height: 2.2em;
-        text-align: center; */
         position: absolute;
         color: white;
         font-size: 1.5em;
@@ -105,6 +109,8 @@
         font-size: 1.2em;
         
     }
+    
+
     .course .course_image_container {
         width: 100%;
     }
@@ -123,6 +129,20 @@
         flex-direction: column;
         align-items: baseline;
         min-height: 100px;
+    }
+    .testimonies {
+        justify-items: center;
+        grid-template-columns: 10% 1fr 10%;
+    }
+    .testimonies .testimonies-title {
+        justify-self: normal;
+        grid-column: 2 / 1 span;
+    }
+    .testimonies .testimony:nth-child(even) {
+        grid-column: 2 / 1 span;
+    }
+    .testimonies .testimony:nth-child(odd) {
+        grid-column: 2 / 1 span;
     }
 }
 @media screen and (max-width: 479px) {

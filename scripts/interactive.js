@@ -7,7 +7,7 @@ window.onload = () => {
 
 function menu() {
   const mediumDevice = window.matchMedia("screen and (max-width: 767px)");
-  const menu = document.querySelector(".menu");
+  const menu = document.querySelector("#nav-bar");
   const burgerButton = document.querySelector('.burger-menu');
   
   function toggleClass() {

@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 h1 {
     color: white;
-    font-size: 32px;
+    font-size: 42px;
     line-height: 1.5;
     letter-spacing: -.2px;
     margin: 0;
@@ -75,11 +75,10 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 32px;
+    padding: 0px 10%;
     background: var(--grisOscuro);
 }
 footer .description {
-    width: 40%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -96,78 +95,82 @@ section div h2 {
     padding: 32px 0;
 }
 
-.header {
-    display: flex;
-    z-index: 3;
+#header {
     top: 0;
+    right: 0;
+    left: 0;
+    display: grid;
+    z-index: 3;
+    padding: 16px 10%;
     position: fixed;
-    flex-wrap: wrap;
-    min-height: 3em;
-    padding: 16px 32px;
-    align-items: center;
-    width: calc(100% - 64px);
-    justify-content: space-between;
     background-color: var(--grisOscuro);
     box-shadow: 0px 6px 10px 0px #070b0fb3;
+    grid-template-columns: 130px 1fr;
+    grid-template-rows: 30px 30px;
+    grid-template-areas:    "text nav-bar"
+                            "img nav-bar" ;
 }
-.header figure {
-    margin: 0;
-    display: inline;
+#header #header-img {
+    width: auto;
+    height: 32px;
+    grid-area: text;
 }
 
-.header nav,
-.header ol,
-.header ol li {
-    display: flex;
-    height: inherit;
-    align-items: center;
+#header figure {
+    margin: 0;
+    margin-top: -16px;
+    grid-area: img;
 }
-.header ol li:last-child a {
+
+#header > #nav-bar {
+    display: grid;
+    grid-area: nav-bar;
+    justify-items: end;
+
+}
+
+#header ol li:last-child a {
     padding: 16px;
     border-radius: .5em;
     border: 1px solid white;
 }
 
-.header ol {
+#header ol {
+    display: flex;
+    align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
 }
-.header .logo {
-    display: flex;
-    flex-direction: column;
-}
-.header .logo h2 {
-    color: white;
-    padding-left: 8px;
-    font-size: 18px;
-}
-.header .logo figure {
-    margin-top: -20px;
-}
-.header .burger-menu {
+
+#header .burger-menu {
     display: none;
 }
 
 .hero  {
-    margin-top: 72px;
-    display: flex;
+    margin-top: 90px;
     position: relative;
-    min-height: 340px;
+    min-height: 540px;
     align-items: center;
     background-color: var(--grisOscuro);
 
 }
 .hero h1 {
+    position: relative;
     z-index: 2;
-    text-shadow: 0px 2px 8px #1d252cbf;
     padding-left: 1em;
+}
+.hero h1 strong {
+    text-shadow: 0px 2px 8px #76a3ccbf;
+}
+.hero-content {
+    grid-column: 2 / 1 span;
 }
 
 .hero img {
     width: 100%;
     height: 100%;
-    opacity: .9;
+    opacity: .8;
     object-fit: cover;
     z-index: 1;
     position: absolute;
@@ -182,11 +185,16 @@ section div h2 {
     padding: 0 1em 1em;
     background: var(--backgroundGrisClaro);
 }
-.courses h2 {
+.courses .courses-title {
+    margin-top: 16px;
     font-size: 1.7em;
     padding-bottom: 8px;
     margin-bottom: 24px;
     border-bottom: 4px solid var(--blue);
+}
+.courses .courses-title,
+.courses .course {
+    grid-column: 2 / 1 span;
 }
 .course {
     display: flex;
@@ -217,7 +225,7 @@ section div h2 {
     margin: 0 auto;
 }
 .course_details button,
-.contact form button {
+.contact #form button {
     font-size: 1em;
     padding: 8px 20px;
     color: var(--blue);
@@ -237,18 +245,21 @@ section div h2 {
     width: 100%;
 }
 .testimonies {
-    display: flex;
-    flex-shrink: 0;
-    flex-wrap: wrap;
-    padding: 0 1em;
-    padding-bottom: 32px;
-    justify-content: space-evenly;
+    padding-bottom: 2em;
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
 }
-.testimonies h2 {
-    width: 100%;
+.testimonies .testimonies-title {
+    grid-column: 2 / 2 span;
+    margin: 1.5em 0;
     padding-bottom: .5em;
-    margin-bottom: 1.5em;
     border-bottom: 4px solid var(--blue);
+}
+.testimonies .testimony:nth-child(even) {
+    grid-column: 2 / 1 span;
+}
+.testimonies .testimony:nth-child(odd) {
+    grid-column: 3 / 1 span;
 }
 
 .testimony {
@@ -288,6 +299,8 @@ section div h2 {
     height: inherit;
     border-radius: 50%;
 }
+
+
 .contact {
     color: white;
     height: 196px;
@@ -296,7 +309,7 @@ section div h2 {
     align-items: center;
     background-color: var(--blue);
 }
-.contact form {
+.contact #form {
     display: flex;
     max-width: 423px;
     width: 100%;
@@ -305,35 +318,31 @@ section div h2 {
     flex-direction: column;
     justify-content: space-evenly;
 }
-.contact form label {
+.contact #form label {
     font-size: 32px;
     box-sizing: border-box;
     font-family: 'Fjalla One', sans-serif;
 }
-.contact form input {
+.contact #form input {
     width: inherit;
     border: none;
+    color: var(--grisOscuro);
+    padding: 8px 4px;
     box-sizing: border-box;
     border-radius: 4px;
     font-size: 27px;
 }
-.contact form button {
+.contact #form #submit {
     align-self: center;
     background: transparent;
     border: 1px solid white;
+    padding: 8px;
     border-radius: 4px;
     color: white;
 }
 
+
 .container {
-    height: inherit;
-    flex: 1;
-    max-width: 1000px;
-    margin: 0 auto;
-    display: inherit;
-    justify-content: inherit;
-    align-items: inherit;
-    height: inherit;
-    flex-wrap: inherit;
-    flex-direction: inherit;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
 }
